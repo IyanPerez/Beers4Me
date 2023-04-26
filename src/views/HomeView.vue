@@ -50,6 +50,7 @@ const filteredBeers = computed(() => {
 
 <style lang="scss" scoped>
 @import "../assets/scss/Reset.scss";
+@import "../assets/scss/HeaderStyles.scss";
 
 .main_container {
   display: flex;
@@ -57,53 +58,6 @@ const filteredBeers = computed(() => {
   align-items: center;
   margin-top: 8%;
   width: 100%;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6rem;
-  z-index: 110;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 4%;
-  padding-inline: 2%;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-  &__title {
-    font-size: 2rem;
-    font-family: 'Kaushan Script', cursive;
-    color: rgb(237, 158, 55);
-
-
-  }
-
-  &__button {
-    height: 3rem;
-    width: 4%;
-    background-color: antiquewhite;
-    color: #000000;
-    border: solid 0.03rem;
-    padding: 0.5rem 0.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    background-image: url("../PunkAPI-logoB&W.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-
-
-    &:hover {
-      background-color: burlywood;
-      height: 3.5rem;
-      border: none;
-    }
-  }
 }
 
 .wrapper {
