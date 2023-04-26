@@ -45,7 +45,7 @@ onMounted(async () => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-inline: 10rem;
+  margin-inline: 17%;
   margin-top: 8rem;
 
   h1{
