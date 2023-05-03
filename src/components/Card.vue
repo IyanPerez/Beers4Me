@@ -1,5 +1,6 @@
 <script setup>
 
+
 const props = defineProps({
 	beer: Object,
 });
@@ -20,10 +21,13 @@ const props = defineProps({
 		<div class="card__content">
 			<p class="card__content__title">{{ beer['name'] }} </p>
 			<p class="card__content__tagline">"{{ beer['tagline'] }}" </p>
-			<p class="card__content__date">First brewed in:</p>
+			<p class="card__content__date">First brewed in:
 			<p class="underline-font"> --- {{ beer['first_brewed'] }} --- </p>
+			</p>
+
 			<p class="card__content__abv">
-				Alc. <p class="bold-font"> {{ beer['abv'] }}% </p> vol.
+				Alc.
+			<p class="bold-font"> {{ beer['abv'] }}% </p> vol.
 			</p>
 		</div>
 
@@ -37,7 +41,7 @@ const props = defineProps({
 	width: 12rem;
 	height: 18rem;
 	margin: 5rem 4.5rem 2rem 1rem;
-	
+
 	&__wrapper {
 		position: relative;
 		width: 70%;
@@ -46,18 +50,18 @@ const props = defineProps({
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-color: antiquewhite;
+		background-color: burlywood;
 		border-radius: 1rem;
 		border: solid 0.12rem;
 		box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.2);
-		transition: 1s;
-		transition-delay: 0.15s;
+		transition: 0.6s;
+		transition-delay: 0.1s;
 	}
-	
+
 	&__link {
 		position: relative;
-		left: 0.5rem;
-		top: -4rem;
+		left: 10rem;
+		top: -5rem;
 		width: 3.1rem;
 		z-index: 90;
 		color: wheat;
@@ -71,27 +75,34 @@ const props = defineProps({
 		background-position-y: 2rem;
 		background-position-x: 1.2rem;
 		transition: ease-out 0.4s;
+		transition-delay: 0.2s;
+
 		.router-link {
 			cursor: pointer;
 			text-decoration: none;
 			color: inherit;
 			font-family: 'Kaushan Script', cursive;
 		}
-		
+
 	}
+
 	&:hover &__link {
-		top: -2.3rem;
-		transition-delay: 0.6s;
+		top: -3.3rem;
+
 		&:hover {
-			top: -0.6rem;
+			top: -1.5rem;
 			background-color: crimson;
-			transition-delay: 0s;
 		}
+	}
+
+	&:hover &__wrapper {
+		padding: 0.1rem;
+		background-color: rgb(237, 158, 55);
 	}
 
 	&__content {
 		position: absolute;
-		left: 0;
+		left: 70%;
 		bottom: 0;
 		right: 0;
 		top: 1rem;
@@ -107,8 +118,9 @@ const props = defineProps({
 		background-color: antiquewhite;
 		font-family: 'Voltaire', cursive;
 		transition: ease-out 0.6s;
-		transition-delay: 0.3s;
-		
+		transition-delay: 0.10s;
+
+
 		&__title {
 			padding-top: 10%;
 			font-size: 1rem;
@@ -116,10 +128,15 @@ const props = defineProps({
 			font-family: 'Kaushan Script', cursive;
 		}
 
+		&__tagline {
+			transition: ease-in-out 0.6s;
+		}
+
 		&__abv {
 			padding-bottom: 10%;
 			display: flex;
 		}
+
 
 		.bold-font {
 			font-weight: 600;
@@ -135,10 +152,10 @@ const props = defineProps({
 	}
 
 	&:hover &__content {
-		left: 70%;
 		box-shadow: -0.2rem 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
-		background-color: burlywood;
+
 	}
 
-}
-</style>
+
+
+}</style>

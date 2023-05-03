@@ -16,12 +16,12 @@ watch(searchQuery, newValue => {
 </script>
 
 <template>
-  <input v-model="searchQuery" type="text" placeholder="&#128269 Filter beers...">
+  <input v-model="searchQuery" type="text" placeholder=" Filter beers...                                                   &#128269">
 </template>
 
 <style scoped>
 input {
-  width: 40%;
+  width: 21rem;
   height: 3rem;
   padding: 0.5rem;
   border: outset 0.1rem;
@@ -41,6 +41,6 @@ input:focus {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
   font-family: 'Voltaire', sans-serif;
   height: 3.3rem;
-  width: 45%;
+  width: 22rem;
 }
 </style>
