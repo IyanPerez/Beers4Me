@@ -3,31 +3,32 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 6rem;
+    height: 5.5rem;
     z-index: 110;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 4%;
-    padding-inline: 2%;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  
+    
     &__title {
       font-size: 2rem;
       font-family: 'Kaushan Script', cursive;
       color: rgb(237, 158, 55);
-  
-  
+      margin-left: 8vw;
+      
+      
     }
-  
+    
     &__button {
+      padding: 8vw;
       height: 3rem;
-      width: 4%;
+      width: 4rem;
       background-color: antiquewhite;
       color: #000000;
       border: solid 0.03rem;
       padding: 0.5rem 0.5rem;
+      margin-right: 8vw;
       border-radius: 5px;
       text-decoration: none;
       background-image: url("../PunkAPI-logoB&W.svg");
