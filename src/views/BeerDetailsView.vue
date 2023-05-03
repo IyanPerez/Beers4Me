@@ -2,6 +2,8 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import Footer from '../components/Footer.vue';
+import Header from '../components/Header.vue';
+import BackgroundBubbles from '../components/BackgroundBubbles.vue';
 
 const beer = ref([]);
 
@@ -22,23 +24,22 @@ onMounted(async () => {
 </script>
 
 <template>
-
-  <header class="header">
-    <h1 class="header__title">Beers4Me</h1>
-    <a href="https://punkapi.com/" target="_blank" class="header__button"></a>
-  </header>
+  
+  
+  <Header/>
 
   <div class="main_container">
     <div class="image" :style="{ 'background-image': `url(${beer['image_url']})` }"></div>
     <h1>{{ beer["name"] }}</h1>
     <p>{{ beer["description"] }}</p>
   </div>
-
+  
   <Footer/>
+  <BackgroundBubbles/>
+  
 </template>
 
 <style lang="scss" scoped>
-@import "../assets/scss/HeaderStyles.scss";
 
 .main_container{
   display: flex;
@@ -64,6 +65,7 @@ onMounted(async () => {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 100;
 }
   
 </style>
