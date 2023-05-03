@@ -28,11 +28,11 @@
   left: 0;
   width: 100%;
   height: 7rem;
-  z-index: 110;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5%;
+  gap: 8%;
   padding: 1rem 2rem;
   background-color: white;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
